@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey Form</title>
+</head>
+<body>
+  <header>
+    <h1 id="title">Survey-FCC</h1>
+    <p id="decription">Please fill the survey</p>
+  </header>
+
+  <div id="maincontent">
+    <form id="survey-form">
+    <div class="content">
+      <label id="name-label" for="name">Name</label>
+      <input type="text" name="name" id="name" class="control" placeholder="Enter your name..." /><span id="nameWarning"></span>
+    </div>
+    <div class="content">
+      <label id="email-label" for="email">Email</label>
+      <input type="email" name="email" id="email" class="control" placeholder="Enter your email-id..." /><span id="emailWarning"></span>
+    </div>
+    <div class="content">
+      <label id="number-label" for="number">Phone Number</label>
+      <input type="number" name="number" id="number" class="control" placeholder="Enter your number..." /><span id="mobileWarning"></span>
+    </div>
+    <div class="content">
+      <p>Which city are you from?</p>
+      <select id="dropdown" name="city" class="control" required>
+        <option disabled selected value>Select city</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="content">
+      <p>Gender</p>
+      <label>
+        <input name="gender" value="female" type="radio" class="input-radio"/>Definitely</label>
+      <label>
+        <input name="gender" value="male" type="radio" class="input-radio"/>Maybe</label>
+    </div>
+    <div class="content">
+      <p>
+        What would you like to see improved?
+        <span class="clue">(Check all that apply)</span>
+      </p>
+
+      <label
+        ><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox"
+        />Front-end Projects</label
+      >
+      <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox"
+        />Back-end Projects</label
+      >
+      <label
+        ><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox"
+        />Data Visualization</label
+      >
+      <label
+        ><input name="prefer" value="challenges" type="checkbox" class="input-checkbox"
+        />Challenges</label
+      >
+      <label
+        ><input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox"
+        />Open Source Community</label
+      >
+      <label
+        ><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox"
+        />Gitter help rooms</label
+      >
+      <label
+        ><input name="prefer" value="videos" type="checkbox" class="input-checkbox"
+        />Videos</label
+      >
+      <label
+        ><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox"
+        />City Meetups</label
+      >
+      <label
+        ><input name="prefer" value="wiki" type="checkbox" class="input-checkbox"
+        />Wiki</label
+      >
+      <label
+        ><input name="prefer" value="forum" type="checkbox" class="input-checkbox"
+        />Forum</label
+      >
+      <label
+        ><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox"
+        />Additional Courses</label
+      >
+    </div>
+    <div class="content">
+      <p>Suggestions</p>
+      <textarea id="comments" class="input-textarea" name="comments" placeholder="We would appreciate any valuable suggestions..."></textarea>
+    </div>
+
+    <div class="content">
+      <button type="submit" id="submit" class="submit-button" onclick="validate()">
+        Submit
+      </button>
+    </div>
+    </form>
+  </div>
+
+  <script src="script.js" type="text/javascript"> </script>
+</body>
+</html>
